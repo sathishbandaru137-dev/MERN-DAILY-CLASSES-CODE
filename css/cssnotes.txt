@@ -1,0 +1,20 @@
+css notes
+-css(cascading style sheet used to apply stylings,layouts animatuions to the web page)
+--> css are introduced in the year 1994 by the developer "honkon wium lium lie"
+-->the present version of css is css3 
+-->methods to apply stylings to web pages:
+1.inline css/ inline stylings 
+--> styling by taking "style attributr"in HTML element
+-->this styling only applicable for only that element 
+-->foe inline css not required css selectors
+--> INLINE styling is more priority then inyernal css/external css
+2.inernal css/internal stylings
+-->applying stylings by taking <style></style> tag in head part is called as the internal css/internal stylings
+-->to apply internall css we need css selectors.
+3.external css/external stylings
+-->apply styling by taking new.css file and link to html file by using <link></link> tag
+--> to apply external css we nened css 
+css selectors
+-which use to target html elements to applying
+-->types of css selectors
+1.simple selectors
