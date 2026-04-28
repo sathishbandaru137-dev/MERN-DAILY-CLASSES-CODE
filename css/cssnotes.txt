@@ -18,3 +18,6 @@ css selectors
 -which use to target html elements to applying
 -->types of css selectors
 1.simple selectors
+-id(#),class(.),tag, grouping(,),universal() seslector
+2.combinator selectors
+

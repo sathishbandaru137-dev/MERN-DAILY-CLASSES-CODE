@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>internal csst</title>
+    <title>Internal css</title>
     <style>
-        ol{
-            background-color: rgb(255, 153, 0);
-            color: white;
+        body {
+            background-color: lightgray;
+        }
+        #heading {
+            background-color: rgb(234, 184, 222);
+            text-align: center;
+        }
+        p {
+            border: 1px solid;
             width: 200px;
-            border: 1px solid black;
+        }
+        .list {
+            color: #e1e1e0;
+            background-color: rgb(3, 4, 4);
+            list-style-type: none;
+        }
+        li {
+            color: aqua;
+            background-color: hsl(0, 0%, 0%) !important;
+            background-color: red;
         }
     </style>
 </head>
 <body>
-    <h1>ordered list</h1>
-    <ol>
-        <li>adress</li>
-        <li>team</li>
-        <li>about</li>
-        <li>company</li>
-        <li>numbers</li>
+    <h1 id="heading">Example List</h1>
+    <ol class="list">
+        <li bgcolor="white">Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
     </ol>
-    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, et consectetur. 
+        Reprehenderit et illo repellendus quod fugit voluptas accusamus assumenda? 
+        Veritatis optio minima mollitia expedita quo autem iusto aspernatur dicta?
+    </p>
 </body>
 </html>
