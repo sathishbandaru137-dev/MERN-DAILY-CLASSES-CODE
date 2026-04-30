@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            
+        }
+        input{
+            width: 400px;
+            padding: 10px;
+            border:  10px solid rgb(34, 32, 32);
+            margin: 20px;
+        }
+        .container{
+            border: 2px solid black;
+            padding: 50px;
+        }
+        #button-container{
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+            row-gap: 10px;
+            column-gap: 10px;
+            margin-bottom: 55px;
+        }
+        #button-container div{
+            border: 2px solid red;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #button-container div::nth-child(){
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <input type="number"  readonly="0">
+        <div id="button-container">
+            <div>C</div>
+            <div>LOG</div>
+            <div>TAN</div>
+            <div>AC</div>
+            <div>SIN</div>
+            <div>COS</div>
+            <div>COT</div>
+            <div>+</div>
+            <div>9</div>
+            <div>8</div>
+            <div>7</div>
+            <div>-</div>
+            <div>6</div>
+            <div>5</div>
+            <div>4</div>
+            <div>%</div>
+            <div>3</div>
+            <div>2</div>
+            <div>1</div>
+            <div></div>
+
+        </div>
+    </div>
+</body>
+</html>

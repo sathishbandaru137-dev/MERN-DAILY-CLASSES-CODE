@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        tbody tr:nth-child(odd){
+            background-color: grey;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emp Details</h1>
+    <input type="search" placeholder="Search Employee's">
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr bgcolor="orange">
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+                <th>Address</th>
+                <th>Phone No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>sravani</td>
+                <td>developer</td>
+                <td>95200</td>
+                <td>atchuthapuram</td>
+                <td>6301403993</td>
+            </tr>
+            <tr>
+                <td>sathish</td>
+                <td>test engineer</td>
+                <td>56200</td>
+                <td>gidajam</td>
+                <td>9110577317</td>
+            </tr>
+            <tr>
+                <td>rambabu</td>
+                <td>RPA Developer</td>
+                <td>86523</td>
+                <td>vizag</td>
+                <td>8974561230</td>
+            </tr>
+              <tr>
+                <td>venky</td>
+                <td>test engineer</td>
+                <td>56200</td>
+                <td>visakapatnam</td>
+                <td>7894561230</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        let rows=document.querySelectorAll("tbody tr")
+        document.querySelector("input").value
+        
+    </script>
+
+</body>
+</html>

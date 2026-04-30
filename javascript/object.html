@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let obj={
+            name:"ajay",
+            rollanumber:'dcd2323',
+            skills:['html','css','js'],
+            address:{
+                citycode:"vizag",
+                zipcode:567801
+            }           
+        }
+         console.log(obj);
+          console.log(obj.name);
+         console.log(obj.rollanumber);
+         console.log(obj.skills);
+         console.log(obj.address);
+         
+          console.log(Object.keys(obj));
+          console.log(Object.values(obj));
+          console.log(Object.entries(obj));
+          
+          obj.name="ram";
+          console.log(obj) //update name
+
+          obj.course='b-tech';
+          console.log(obj)  //update values
+
+          delete obj.address;
+          console.log(obj)  //delete the values
+
+
+        obj.rollnumber="NNR1AO"
+        console.log(obj)   //edit the values
+
+        obj.age="20"
+        console.log(obj)
+        
+        // const obj1=new object({
+          //  username:"admin",
+           // password:"admin@123"
+         //})
+    </script>
+</body>
+</html>
