@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i=10; i>=2; i=i-2){
+            console.log(i);
+            
+       }
+        let count=0;
+       while(count<=10){
+           console.log(`2 x ${count} = ${2*count}`);
+            count++;
+       }
+    //   let num=8736757863
+     //  console.log(num);
+
+ // while(num!=0){
+   // let rem=num%10;
+   // console.log(rem);
+   // num=Math.floor(num/10);
+
+ // }
+
+  let j=1;
+    do{
+        console.log(j);
+        j++;
+    }while(j<=5);
+
+
+let arr=[1,2,3,4,5];
+    let str="javascript";
+    for(index in str){
+        console.log(index);
+        
+    }
+    for(arrInd in arr){
+        console.log(arrInd);
+    }
+console.log("************");
+    for(value of arr){
+        console.log(value);
+    }
+    for(sVal of str){
+        console.log(sVal);
+    }
+
+    arr.forEach((v,i,a)=>{
+        console.log(v,i,a);
+    })
+    
+
+
+
+    </script>
+</body>
+</html>

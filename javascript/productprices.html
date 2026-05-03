@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let productprice =[500,2600,850,1200,3000];
+console.log(productprice);
+// mapping the price with 10% discount
+       let mappedprices= productprice.map((price)=>{
+        return price-price/10;
+            });
+
+
+            console.log(mappedprices);
+            //fitering the price which are greater than 1000;
+         filterproducts= mappedprices.filter((price)=>{
+                return price>1000;
+            });
+        console.log(filterproducts);
+            
+    </script>
+    
+</body>
+</html>
