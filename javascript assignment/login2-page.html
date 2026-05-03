@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+
+  let storedUser = localStorage.getItem("username");
+  let storedPass = localStorage.getItem("password");
+
+  if (username === storedUser && password === storedPass) {
+    localStorage.setItem("loggedInUser", username);
+    window.location.href = "home.html";
+  } else {
+    alert("Invalid Username or Password");
+  }
+}
+</script>
+
+</body>
+</html>

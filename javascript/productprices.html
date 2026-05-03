@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let productprice =[500,2600,850,1200,3000];
-console.log(productprice);
-// mapping the price with 10% discount
-       let mappedprices= productprice.map((price)=>{
-        return price-price/10;
-            });
+        let productPrice = [500, 2600, 850, 950, 5500, 6000];
+        console.log(productPrice);
+
+        //mapping 10% discount to product prices
+        let mappedPrices = productPrice.map((price) => {
+            return price - price / 10;
+        });
+        console.log(mappedPrices);
+
+        //flitter discounted products  1000 to 5000rs prices 
+        let filteredProducts = mappedPrices.filter((price) => {
+            return price >= 1000 && price <= 5000;
+        })
+        console.log(filteredProducts);
 
 
-            console.log(mappedprices);
-            //fitering the price which are greater than 1000;
-         filterproducts= mappedprices.filter((price)=>{
-                return price>1000;
-            });
-        console.log(filterproducts);
-            
+        //total sum of mappedprices 
+        let totalPrice = mappedPrices.reduce((price, acc) => {
+            return price+acc;
+        },250)
+
+        console.log(totalPrice);
+
+
     </script>
-    
 </body>
+
 </html>
