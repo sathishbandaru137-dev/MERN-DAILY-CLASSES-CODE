@@ -1,0 +1,16 @@
+import react from "react";
+import Nav from "./Nav";
+const Nav=()=>{
+
+    return(
+        <P>
+            <nav>
+                <ol>
+                       <li>List-1</li>
+                       <li>List-2</li>
+                       <li>List-3</li>
+                       <li>List-4</li>  
+                </ol>
+            </nav>
+        </P>
+    )}

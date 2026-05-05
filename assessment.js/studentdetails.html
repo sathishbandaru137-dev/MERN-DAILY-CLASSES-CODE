@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+             border: 1px solid black;
+             border-collapse: collapse;
+             padding: 10px;
+        }   
+    </style>
+</head>
+<body>
+    <h1>Student percentage calculation</h1>
+    <table>
+    <tr>
+        <th>StudentName</th>
+        <th>java</th>
+        <th>python</th>
+        <th>javascript</th>
+        <th>Total</th>
+        <th>percentage</th>
+    </tr>
+     
+    <script>
+        let students = [
+            {
+                name: "sathish",
+                java: 92,
+                python: 66,
+                javascript: 66
+            },
+            {
+                name: "sravani",
+                java: 99,
+                python: 33,
+                javascript: 65
+            },
+            {
+                name: "suresh",
+                java: 87,
+                python: 76,
+                javascript: 76
+            }
+        ]
+
+        students.forEach((student) => {
+            let total=student.java + student.python + student.javascript
+            let percentage= (student.java + student.python + student.javascript)/3 ;
+            document.write(`
+            <tr>
+                <td>${student.name}</td>
+                <td>${student.java}</td>
+                <td>${student.python}</td>
+                <td>${student.javascript}</td>
+                <td>${total}</td>
+                <td>${percentage}</td>
+            </tr>
+            `)
+        })
+        </script>
+          </table>
+
+
+</body>
+</html>
