@@ -1,11 +1,20 @@
-import react from "react";
-import Classbasedcomponent from "./Classbasedcomponent";
-const App=() =>{
+import React  from "react";
+import DisplayMyDetails from "./Components/DisplayMyDetails";
+
+const App=()=>{
+ 
+  let DisplayMyDetail={
+    Name : "Bandaru satish",
+    RollNo : "23NR1A0517",
+    Course : "CSE",
+    Collage : "BITS Vizag",
+
+  }
+ 
   return(
     <p>
-      <h1> React App using vite</h1>
-      <Classbasedcomponent/>
+      <DisplayMyDetails mydata={DisplayMyDetail}/>
     </p>
-  )
-}
+  );
+};
 export default App;
