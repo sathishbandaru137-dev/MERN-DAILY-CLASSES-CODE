@@ -10,18 +10,8 @@ const Login = () => {
     otp: "",
   });
 
-  const [mailOtp, setMailOtp] = useState(0);
-  //function to handle form submit
-  const handleLogin = (e) => {
-    try {
-      e.preventDefault();
-      console.log(loginDetails);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  let [mailOtp, setMailOtp] = useState(0);
 
-  
   //function to fetch input values
   const handleChange = (e) => {
     setLoginDetails({ ...loginDetails, [e.target.name]: e.target.value });
@@ -43,12 +33,13 @@ const Login = () => {
       let time = new Date();
       let expiredTime = `${time.getHours()}:${time.getMinutes() + 15}:00`;
       setMailOtp(generatedOtp);
+
       let formData = {
         email: loginDetails.username,
         otp: generatedOtp,
         time: expiredTime,
       };
-      await EmailJS.sendForm("service_3tbuas9","template_l26pccc",{email:loginDetails.email},"MhE441jzaf0jkoer3", {
+      await emailjs.send("service_9l1dihp", "template_7bth6c8", formData, {
         publicKey: "N3xga7GAtw352Ac-q",
       });
 
@@ -56,6 +47,23 @@ const Login = () => {
     } catch (err) {
       console.log(err);
       toast.error("failed to generate otp");
+    }
+  };
+
+  //function to handle form submit
+  const handleLogin = (e) => {
+    try {
+      e.preventDefault();
+      if (mailOtp == loginDetails.otp && loginDetails.password != "") {
+        toast.success("login successful");
+      } else if (mailOtp != loginDetails.otp) {
+        toast.warn("invalid otp");
+      }
+
+      console.log(loginDetails);
+      console.log(mailOtp);
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -127,3 +135,5 @@ const Login = () => {
     </div>
   );
 };
+
+export default Login;
