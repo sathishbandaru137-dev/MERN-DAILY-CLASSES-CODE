@@ -25,7 +25,4 @@ const addStudent = (req, res) => {
 //get student based on ID
 //delete student
 //update studentDetails
-//update only phoneNo
-
-
-module.exports=addStudent;
+//update only phoneN

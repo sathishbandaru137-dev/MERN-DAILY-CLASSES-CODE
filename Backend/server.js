@@ -5,8 +5,11 @@ const connection=require("./config/db");
 app.use(express.json());
 connection();
 const studentRouter=require("./routes/studentRouter");
+const collageRouter=require("./routes/collagetRouter");
 
 app.use("/students",studentRouter);
+app.use("/collage",collageRouter);
+
 
 app.listen(PORT,()=>{
   console.log("Server running on port",PORT);
