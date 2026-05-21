@@ -1,14 +1,19 @@
 const express=require("express")
-const app=expess();
+const app=express();
 const env=require("dotenv")
-const connection=require("./config/database)")
+const connection=require("./config/database")
+const UserRouter=require("./routes/userRouter");
+const prompt=require("./routes/promptRouter");
+const cors=require("cors");
 env.config();
-connection();
-
 const PORT=process.env.PORT
+connection()
+app.use(express.json());
+app.use(cors())
+app.use("/user",UserRouter);
+app.use("/ai",prompt)
+
+
 app.listen(PORT,()=>{
-    console.log("server running on:",PORT);
-}
-
-
-);
+    console.log("server running on :", PORT);
+});
